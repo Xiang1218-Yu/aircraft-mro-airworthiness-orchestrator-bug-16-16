@@ -81,6 +81,21 @@ export interface CertificateRecord {
   updatedAt: string;
 }
 
+export interface CertificateObject {
+  version: number;
+  content: string;
+  fingerprint: string;
+}
+
+export interface CertificateFileCleanupTask {
+  stockId: string;
+  version: number;
+  objectKey: string;
+  fingerprint: string;
+}
+
+export type CertificateFileCleanupResult = 'CLEANED' | 'ALREADY_CLEANED' | 'SKIPPED_CURRENT' | 'SKIPPED_MISMATCH';
+
 export interface CustomsDeclaration {
   id: string;
   tenantId: TenantId;
