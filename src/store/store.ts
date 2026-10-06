@@ -1,5 +1,6 @@
 import type {
   AuditRecord,
+  CertificateObjectMeta,
   CertificateRecord,
   CoreReturn,
   CustomsDeclaration,
@@ -64,5 +65,6 @@ export class Store {
     this.ledger.push({ ...entry, id: this.nextId('ledger'), createdAt: this.now() });
   }
   readonly certificateObjects = new Map<string, string>();
+  readonly certificateObjectMeta = new Map<string, CertificateObjectMeta>();
   readonly certificatePointers = new Map<string, string>();
 }

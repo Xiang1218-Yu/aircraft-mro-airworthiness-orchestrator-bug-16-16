@@ -81,6 +81,12 @@ export interface CertificateRecord {
   updatedAt: string;
 }
 
+export interface CertificateObjectMeta {
+  stockId: string;
+  version: number;
+  fingerprint: string;
+}
+
 export interface CustomsDeclaration {
   id: string;
   tenantId: TenantId;
